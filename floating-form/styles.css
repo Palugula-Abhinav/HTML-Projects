@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+html,
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    border: 0.063rem solid #8a40f9;
+    padding: 1.2rem;
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#username-section,
+#password-section {
+    position: relative;
+    width: 20vw;
+}
+
+#username,
+#password {
+    position: relative;
+    right: 0.35rem;
+    width: 99%;
+    margin: 0;
+    background-color: transparent;
+    border: 0.063rem solid #8a40f9;
+    padding: 0.59rem 0.41rem;
+    caret-color: #8a40f9;
+    border-radius: 0.125rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: #8a40f9;
+}
+
+#username:valid,
+#username:focus,
+#password:valid,
+#password:focus {
+    outline: 0
+}
+
+#username-label,
+#password-label {
+    color: #8a40f9;
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 8px;
+    left: 0.125;
+    background-color: #ffffff;
+    transition-duration: .5s;
+}
+
+#username-section>#username:focus~#username-label,
+#username-section>#username:valid~#username-label,
+#password-section>#password:focus~#password-label,
+#password-section>#password:valid~#password-label {
+    top: -0.75rem;
+    left: 0;
+    padding: 0 0.25rem;
+}
+
+#btn {
+    background-color: #8a40f9;
+    position: relative;
+    right: 2%;
+    width: 104%;
+    border: 0.063rem solid #8a40f9;
+    cursor: pointer;
+    padding: 0.3rem 0;
+    border-radius: 0.2rem;
+    color: #ffffff;
+}
+
+#btn:hover {
+    background-color: #8a40f9d3;
+    color: #ffffff;
+}
